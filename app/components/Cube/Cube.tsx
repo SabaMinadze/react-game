@@ -3,8 +3,8 @@ import { useState } from 'react'
 import styles from "./Cube.module.css"
 
 export default function Cube() {
-    const [x, setX] = useState<number>(200)
-    const [y, setY] = useState<number>(200)
+    const [x, setX] = useState<number>(1)
+    const [y, setY] = useState<number>(1)
 
     const moveSpeed: number = 50
 
