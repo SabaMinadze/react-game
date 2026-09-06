@@ -3,10 +3,10 @@ import React, { useState } from 'react'
 import styles from "./Cube.module.css"
 
 export default function Cube() {
-    const [x, setX] = useState<number>(0)
-    const [y, setY] = useState<number>(0)
+    const [x, setX] = useState<number>(25)
+    const [y, setY] = useState<number>(25)
 
-    let moveSpeed = 150
+    const moveSpeed: number = 50
 
   return (
     <>
@@ -15,7 +15,7 @@ export default function Cube() {
       <div className={styles.parent}>
 
         <center><button onClick={(e) => {
-          setY(y - 50)
+          setY(y - moveSpeed)
         }}>↑
         </button></center>
 
@@ -26,7 +26,7 @@ export default function Cube() {
 
         
         <button onClick={(e) => {
-          setY(y + 50)
+          setY(y + moveSpeed)
         }}>↓</button>
 
         <button onClick={(e) => {
@@ -36,10 +36,6 @@ export default function Cube() {
         </button>
 
     </div>
-
-
-
-    
 
 
 <div style={{
