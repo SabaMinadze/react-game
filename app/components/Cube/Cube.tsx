@@ -6,7 +6,7 @@ export default function Cube() {
     const [x, setX] = useState<number>(0)
     const [y, setY] = useState<number>(0)
 
-    let moveSpeed = 50
+    let moveSpeed = 150
 
   return (
     <>
@@ -15,7 +15,7 @@ export default function Cube() {
       <div className={styles.parent}>
 
         <center><button onClick={(e) => {
-          setY(y - 25)
+          setY(y - 50)
         }}>↑
         </button></center>
 
@@ -26,7 +26,7 @@ export default function Cube() {
 
         
         <button onClick={(e) => {
-          setY(y + 25)
+          setY(y + 50)
         }}>↓</button>
 
         <button onClick={(e) => {
