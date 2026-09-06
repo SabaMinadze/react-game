@@ -6,20 +6,50 @@ export default function Cube() {
     const [x, setX] = useState<number>(0)
     const [y, setY] = useState<number>(0)
 
+    let moveSpeed = 50
+
   return (
-    <div
-    style={{
-        backgroundColor: "null",
-        color: 'green',
-        fontSize: "40px",
-        width: "100px",
-        height: "50px",
-        cursor: "pointer",
+    <>
+
+
+      <div className={styles.parent}>
+
+        <center><button onClick={(e) => {
+          setY(y - 25)
+        }}>↑
+        </button></center>
+
+        <button onClick={(e) => {
+          setX(x - moveSpeed)
+        }}>←
+        </button>
+
+        
+        <button onClick={(e) => {
+          setY(y + 25)
+        }}>↓</button>
+
+        <button onClick={(e) => {
+          setX(x + moveSpeed)
+        }}
+        >→
+        </button>
+
+    </div>
+
+
+
+    
+
+
+<div style={{
         marginLeft: x,
         marginTop: y,
     }}
-    className={styles.cube}>
+    className={styles.cube}
+    >
         <p>Cube</p>
     </div>
+    </>
   )
 }
