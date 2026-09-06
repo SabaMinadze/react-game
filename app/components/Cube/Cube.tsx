@@ -1,10 +1,10 @@
 "use clinet"
-import React, { useState } from 'react'
+import { useState } from 'react'
 import styles from "./Cube.module.css"
 
 export default function Cube() {
-    const [x, setX] = useState<number>(25)
-    const [y, setY] = useState<number>(25)
+    const [x, setX] = useState<number>(200)
+    const [y, setY] = useState<number>(200)
 
     const moveSpeed: number = 50
 
@@ -13,11 +13,12 @@ export default function Cube() {
 
 
       <div className={styles.parent}>
-
-        <center><button onClick={(e) => {
-          setY(y - moveSpeed)
-        }}>↑
-        </button></center>
+        <center>
+          <button onClick={(e) => {
+            setY(y - moveSpeed)
+          }}>↑
+          </button>
+        </center>
 
         <button onClick={(e) => {
           setX(x - moveSpeed)
@@ -34,17 +35,15 @@ export default function Cube() {
         }}
         >→
         </button>
+      </div>
 
-    </div>
 
-
-<div style={{
+    <div style={{
         marginLeft: x,
         marginTop: y,
     }}
-    className={styles.cube}
-    >
-        <p>Cube</p>
+    className={styles.cube}>
+      <p>Cube</p>
     </div>
     </>
   )
