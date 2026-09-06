@@ -9,6 +9,7 @@ export default function Home() {
       <h1>Hello Next.js</h1>
     </div>
     <Cube/>
+    <p>For test Branch</p>
     </>
   );
 }
